@@ -7,7 +7,9 @@ In short, Association Rules facilitate the discovery of relationships where item
 ![Slide1](https://github.com/selbydiva/association-rules/assets/154320650/f78599b7-763e-47bf-aef2-6c41369a9da4)
 
 Support measures the frequency with which an itemset appears in the data
+
 Confidence measures the likelihood of occurrence item B and item A simultaneously in the data
+
 Lift measures how much more likely item B is to be purchased when item A is purchased, compared to the likelihood of purchasing item B independently
 
 
@@ -23,6 +25,18 @@ Here is what the bottom 5 data looks like
 
 ![Slide2](https://github.com/selbydiva/association-rules/assets/154320650/a0119b08-bd1b-4c8e-b867-15c6e6ff18ec)
 
-To shorten the time, we can use tools for implementing Assotion Rules to this data. In python, we can use library mlxtend to implement Association Rules and pyvis to visualize the result. 
+To expedite the process, we can use tools to implement Association Rules on this data. In Python, we can use the mlxtend library to apply Association Rules and pyvis to visualize the results.
 
-In this process, 10 rules based on top confidence values are taken. By focus on confidence level without consider the support is high or not, we can dig more about the relation for each rule. The expetations is the support can be improved by making these 2 store closer if the support value is low and and the support can be maintained if the support value already high
+In this process, the top 10 rules based on support values are selected. By focusing on support levels, we can dig more from the related stores 
+
+In this process, the top 10 rules based on confidence values are selected. By focusing on confidence levels without considering whether the support is high or low, we can better understand the relationships within each rule. The expectation is that support can be improved by bringing two related stores closer together if the support value is low, and support can be maintained if the value is already high. Here is the result :
+
+![Slide3](https://github.com/selbydiva/association-rules/assets/154320650/be3f8791-67e9-4f98-8ef6-1b3a1b958b37)
+
+To understand that table, let's take a look on first row of that table. It's Guardian -> Giant Supermarket, it means people who make purchase at Guardian also make purcahse at Giant Supermarket
+
+
+- In Association Rules, Guardian is Antecedents and Giant Supermarket Consequents Support so Antecedents Support and Consequents Support are support values for each store.
+- Support measures the frequency with which Guardian and Giant Supermarket appears simultaneously in the data. So, appearance of Guardian and Giant Supermarket simultaneously is 0.3188%
+- Confidence measures the likelihood of occurrence Giant Supermarket and Guardian simultaneously in the data. 
+
